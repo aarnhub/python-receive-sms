@@ -1,0 +1,38 @@
+<html>
+<head>
+<style>
+table {
+  border-collapse: collapse;
+  width: 50%;
+}
+th, td {
+  text-align: center;
+  padding: 8px;
+}
+tr:nth-child(even){background-color: #f2f2f2}
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+</style>
+</head>
+   <body>
+      <table>
+         <tr>
+          <th>id</th>
+            <th>date</th>
+            <th>Number</th>
+            <th>Text</th>
+         </tr>
+         
+         {% for row in rows %}
+            <tr>
+             <td>{{ row["id"]}}</td>
+               <td>{{ row["date"]}}</td>	
+               <td> {{ row["number"]}}</td>
+               <td>{{row['text']}}</td>	
+            </tr>
+         {% endfor %}
+      </table>
+         </body>
+</html>
